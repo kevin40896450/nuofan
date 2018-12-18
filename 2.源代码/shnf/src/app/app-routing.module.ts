@@ -4,11 +4,12 @@ import { LoginComponent } from './login/login.component';
 
 const routes: Routes = [
   {
-    path: '',
-    redirectTo: '/login',
-    // pathMatch: 'full',
-    component: LoginComponent
-  }
+    path: 'login',
+    component: LoginComponent,
+    data: { title: '登录' }
+  },
+  { path: '',   redirectTo: '/login', pathMatch: 'full' },
+  { path: '**', component: LoginComponent }
 ];
 
 @NgModule({
